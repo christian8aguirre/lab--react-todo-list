@@ -1,0 +1,15 @@
+.container__Header{
+  color: #ecf0f1;
+  font-size: 40px;
+  text-shadow: 1px 1px 1px rgba(1,1,1,0.8);
+  line-height: 1.25;
+}
+.container__Header h2{
+  margin: 0;
+}
+
+.container__Header small{
+  color: #95A5A6;
+  font-size: 14px;
+  text-shadow: 1px 1px 1px rgba(1,1,1,0.5);
+}
