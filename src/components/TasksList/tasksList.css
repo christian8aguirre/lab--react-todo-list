@@ -6,6 +6,10 @@
   padding: 20px;
 }
 
+.taskList--hidden{
+  display: none;
+}
+
 .radiocheck-group{
   display: flex;
   align-items: center;

@@ -3,16 +3,17 @@ import './addElement.css'
 
 class AddElement extends Component {
   render() {
-    return [
-      
+    return (
+      <div>
       <div className='submit'>
         <input type="text"/>
           <button>
-            <i class="fa fa-plus"></i>
+            <i className="fa fa-plus"></i>
           </button>
-      </div>,
+      </div>
       <hr />
-    ];
+      </div>
+    )
   }
 }
 

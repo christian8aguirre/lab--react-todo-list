@@ -1,32 +1,35 @@
 import React, { Component } from 'react'
 import './tasksList.css'
+import { tasksDefault } from '../../data/tasksDefault'
 
 class TasksList extends Component {
+  constructor(props) {
+    super(props);
+    this.currentElement = React.createRef();
+    this.removeCurrentElement = this.removeCurrentElement.bind(this);
+  }
+
+  removeCurrentElement() {
+    this.currentElement.current.remove();
+  }
+
+  
   render() {
-    return [
-      <div className='taskList'>
-        <div class="taskText">
-          <label class="radiocheck-group">
-            <input type="checkbox" value="on"/>
-            <span>wash cat</span>
+    console.log(this);
+
+    return (
+      <div className='taskList' ref={this.currentElement}>
+        <div className="taskText">
+          <label className="radiocheck-group">
+            <input type="checkbox" value="on" />
+            <span>{this.props.data.text}</span>
           </label>
         </div>
-        <div class="taskX">
-          <i class="fa fa-remove fa-2x"></i>
+        <div className="taskX" onClick={this.removeCurrentElement}>
+          <i className="fa fa-remove fa-2x"></i>
         </div>
-      </div>,
-      <div className='taskList'>
-      <div class="taskText">
-        <label class="radiocheck-group">
-        <input type="checkbox" value="on"/>
-        <span>wash cat</span>
-        </label>
       </div>
-      <div class="taskX">
-        <i class="fa fa-remove fa-2x"></i>
-      </div>
-    </div>
-    ]
+      )
   }
 }
 
