@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import './tasksList.css'
-import { tasksDefault } from '../../data/tasksDefault'
 
 class TasksList extends Component {
   constructor(props) {
@@ -12,10 +11,8 @@ class TasksList extends Component {
   removeCurrentElement() {
     this.currentElement.current.remove();
   }
-
   
   render() {
-    console.log(this);
 
     return (
       <div className='taskList' ref={this.currentElement}>
